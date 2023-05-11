@@ -35,16 +35,16 @@ struct CharacterHomeView<ViewModel: CharacterHomeModelling>: View {
                         .padding(.leading, 24)
                         .padding(.top, -36)
                     
-                    Spacer()
+//                    Spacer()
                     
-                    Button(action: {
-                        viewModel.logout()
-                    }) {
-                        Text("Sair")
-                            .font(Font.custom("Nunito-Medium", size: 20))
-                        Image(systemName: "arrow.right.to.line")
-                    }.foregroundColor(Color.black)
-                        .padding(.trailing, 15)
+//                    Button(action: {
+//                        viewModel.logout()
+//                    }) {
+//                        Text("Sair")
+//                            .font(Font.custom("Nunito-Medium", size: 20))
+//                        Image(systemName: "arrow.right.to.line")
+//                    }.foregroundColor(Color.black)
+//                        .padding(.trailing, 15)
                 }
                 
                 VStack {

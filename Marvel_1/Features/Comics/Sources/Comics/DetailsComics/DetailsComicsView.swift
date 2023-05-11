@@ -37,7 +37,7 @@ public struct DetailsComicsView<ViewModel: DetailsComicsModelling>: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
-                        .clipped()
+                        .edgesIgnoringSafeArea(.bottom)
                 }
                 
                 VStack {

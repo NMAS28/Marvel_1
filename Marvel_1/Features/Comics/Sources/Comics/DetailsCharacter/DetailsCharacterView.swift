@@ -35,8 +35,7 @@ public struct DetailsCharacterView<ViewModel: DetailsCharacterModelling>: View {
                     KFImage(URL(string: "\(currentCharacter.thumbnail)"))
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
-                        .clipped()
+                        .edgesIgnoringSafeArea(.bottom)
                 }
                 
                 VStack {

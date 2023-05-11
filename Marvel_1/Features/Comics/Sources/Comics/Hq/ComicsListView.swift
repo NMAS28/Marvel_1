@@ -49,6 +49,7 @@ struct ComicsListView<ViewModel: ComicsModelling>: View {
                                         .frame(width: 140, height: 182, alignment: .leading)
                                         .overlay(borderStroke)
                                         .padding(.leading, 8)
+                                        .padding(.top, 8)
                                 }
                                 
                                 VStack(alignment: .leading, spacing: 8) {
@@ -59,8 +60,7 @@ struct ComicsListView<ViewModel: ComicsModelling>: View {
                                             .frame(width: 178, height: 34)
                                             .background(Color.white)
                                             .overlay(borderStroke)
-                                        
-                                        Spacer()
+                                            .padding(.top, 8)
                                     }
                                     
                                     Text(i.textObjects.first ?? "")

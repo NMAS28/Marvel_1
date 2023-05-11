@@ -11,7 +11,7 @@ import Domain
 
 public class LoginViewModel: ObservableObject {
     private var coordinator: LoginCoordinating?
-    @Published public var loginModel = LoginAuthenticationModel(email: "jessicaserqueira@gmail.com", password: "15ioasys@A")
+    @Published public var loginModel = LoginAuthenticationModel(email: "", password: "")
     @AppStorage("uid") var userID = String()
     @Published public var formInvalid = false
     public var alertText = ""
