@@ -55,6 +55,9 @@ class CoordinatorsAssembly: Assembly {
         
         // MARK: - FavoritesCoordinator
         container.register(type: FavoritesCoordinator.self, component: FavoritesCoordinator (tabBarController: appCoordinator.tabBarController))
+        
+        // MARK: - SignOutCoordinator
+        container.register(type: SignOutCoordinator.self, component: SignOutCoordinator (tabBarController: appCoordinator.tabBarController))
     }
 }
 

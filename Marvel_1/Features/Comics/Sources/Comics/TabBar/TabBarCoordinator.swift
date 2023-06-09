@@ -26,18 +26,21 @@ public class TabBarCoordinator: Coordinator {
         let characterHomeCoordinator = makeCharacterHomeCoordinator()
         let comicsCoordinator = makeComicsCoordinator()
         let favoritesCoordinator = makeFavoritesCoordinator()
+        let signOutCoordinator = makeSignOutCoordinator()
         
         childCoordinators = [
             characterHomeCoordinator,
             comicsCoordinator,
-            favoritesCoordinator
+            favoritesCoordinator,
+            signOutCoordinator
         ]
         
         tabBarViewController.setViewControllers(
             [
                 characterHomeCoordinator.navigationController,
                 comicsCoordinator.navigationController,
-                favoritesCoordinator.navigationController
+                favoritesCoordinator.navigationController,
+                signOutCoordinator.navigationController
             ],
             animated: true
         )
@@ -63,4 +66,10 @@ public class TabBarCoordinator: Coordinator {
         coordinator.start()
         return coordinator
     }
+    
+    @MainActor private func makeSignOutCoordinator() -> SignOutCoordinator {
+        let coordinator = container.resolveSafe(SignOutCoordinator.self)
+         coordinator.start()
+         return coordinator
+     }
 }
